@@ -1,0 +1,31 @@
+{
+  "name": "meow-notes",
+  "version": "1.0.0",
+  "description": "Terminal note-taking app for rugged developers",
+  "bin": {
+    "meow-notes": "./bin/meow-notes"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/cli/index.js",
+    "dev": "tsc-watch --onSuccess \"node ./dist/cli/index.js\"",
+    "link": "npm run build && npm link"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "date-fns": "^3.6.0",
+    "figlet": "^1.7.0",
+    "inquirer": "^9.2.12",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.7.0",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.15.3",
+    "@types/uuid": "^10.0.0",
+    "tsc-watch": "^6.2.1",
+    "typescript": "^5.8.3"
+  },
+  "main": "dist/cli/index.js"
+}
